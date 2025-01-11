@@ -5,12 +5,75 @@
     box-sizing: border-box;
 }
 
+
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #FCFFC1;
-    color: #333;
-}
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+            color: #000000; /* Bold black color */
+        }
+        h1 {
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            background-color: #fdfdfd;
+            z-index: 10;
+        }
+        h2, h3 {
+            background-color: #fffacd; /* Light yellow background */
+            padding: 8px;
+            border-radius: 5px;
+        }
+        ul, table, ol {
+            background-color: #fffacd; /* Light yellow background for tables and lists */
+            border-radius: 5px;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            border: 1px solid #d3d3d3;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f0e68c; /* Darker yellow for table headers */
+        }
+        a {
+            color: #1e90ff; /* Blue links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+                padding: 10px;
+            }
+            h2, h3 {
+                font-size: 1.2em;
+            }
+            table th, table td {
+                font-size: 0.9em;
+            }
+        }
 
 /* Header */
 header {
