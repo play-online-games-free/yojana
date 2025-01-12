@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukanya Samriddhi Yojana Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Sukanya Samriddhi Yojana Calculator</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="yearlyDeposit">Yearly Deposit (₹):</label>
+                <input type="number" id="yearlyDeposit" min="1000" max="150000" step="1000" value="25000">
+                <small>Min: ₹1,000 | Max: ₹1,50,000 per year</small>
+            </div>
+            <div class="input-group">
+                <label for="girlAge">Girl's Age (Years):</label>
+                <input type="number" id="girlAge" min="0" max="10" value="2">
+                <small>Must be below 10 years</small>
+            </div>
+            <button onclick="calculateSSY()">Calculate</button>
+            <div class="results">
+                <div class="result-item">
+                    <span>Total Investment:</span>
+                    <span id="totalInvestment">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Interest Earned:</span>
+                    <span id="interestEarned">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Maturity Amount:</span>
+                    <span id="maturityAmount">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Investment Period:</span>
+                    <span id="investmentPeriod">0 years</span>
+                </div>
+                <div class="result-item">
+                    <span>Maturity Period:</span>
+                    <span id="maturityPeriod">0 years</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
