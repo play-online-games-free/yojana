@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const posts = [
         {
-            title: 'GNIDA New Residential Plot Scheme (LOP-05/2025)',
+            title: 'Sukanya Samriddhi Yojana Calculator
+ (LOP-05/2025)',
             date: 'January 7, 2025',
             description: 'The Greater Noida Industrial Development Authority has launched a new residential plot scheme near the International Airport.',
             thumbnail: 'path/to/thumbnail1.jpg',
