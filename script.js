@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const categories = [
-        'Housing Schemes',
+        'calculator',
         'Health Schemes',
         'Education Schemes',
         'Employment Schemes',
