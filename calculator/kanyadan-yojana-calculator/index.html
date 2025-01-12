@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanyadan Yojana Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Kanyadan Yojana Calculator</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="familyIncome">Annual Family Income (₹):</label>
+                <input type="number" id="familyIncome" min="0" max="250000" step="1000" value="50000">
+                <small>Must be below ₹2,50,000 per year</small>
+            </div>
+            <div class="input-group">
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="general">General</option>
+                    <option value="sc">SC</option>
+                    <option value="st">ST</option>
+                    <option value="obc">OBC</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="girlAge">Girl's Age (Years):</label>
+                <input type="number" id="girlAge" min="18" max="40" value="18">
+                <small>Must be 18 years or above</small>
+            </div>
+            <button onclick="calculateBenefit()">Calculate Benefits</button>
+            <div class="results">
+                <div class="result-item">
+                    <span>Eligibility Status:</span>
+                    <span id="eligibilityStatus">Not Checked</span>
+                </div>
+                <div class="result-item">
+                    <span>Financial Assistance:</span>
+                    <span id="financialAssistance">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Additional Benefits:</span>
+                    <span id="additionalBenefits">None</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
