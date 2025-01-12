@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atal Pension Yojana Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Atal Pension Yojana Calculator</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="age">Current Age (Years):</label>
+                <input type="number" id="age" min="18" max="40" value="25">
+                <small>Must be between 18-40 years</small>
+            </div>
+            <div class="input-group">
+                <label for="monthlyPension">Monthly Pension Required (₹):</label>
+                <select id="monthlyPension">
+                    <option value="1000">₹1,000</option>
+                    <option value="2000">₹2,000</option>
+                    <option value="3000">₹3,000</option>
+                    <option value="4000">₹4,000</option>
+                    <option value="5000" selected>₹5,000</option>
+                </select>
+            </div>
+            <button onclick="calculateAPY()">Calculate Contribution</button>
+            <div class="results">
+                <div class="result-item">
+                    <span>Monthly Contribution:</span>
+                    <span id="monthlyContribution">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Yearly Contribution:</span>
+                    <span id="yearlyContribution">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Total Investment Till 60:</span>
+                    <span id="totalInvestment">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Monthly Pension After 60:</span>
+                    <span id="pensionAmount">₹0</span>
+                </div>
+                <div class="result-item">
+                    <span>Corpus at 60 Years:</span>
+                    <span id="corpusAmount">₹0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
