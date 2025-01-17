@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telugu Jobs</title>
+  <style>
+    .hidden { display: none; }
+    .post-item { margin-bottom: 20px; }
+    .post-item h3 { margin: 0; }
+  </style>
+</head>
+<body>
+  <h1>Telugu Jobs</h1>
+
+  <!-- Hidden posts data -->
+  <div id="all-posts" class="hidden">
+    <div data-category="telugu-jobs" data-title="Telugu Job 1" data-date="2025-01-17" data-link="post1.html"></div>
+    <div data-category="telugu-jobs" data-title="Telugu Job 2" data-date="2025-01-15" data-link="post2.html"></div>
+    <div data-category="other-category" data-title="Other Job" data-date="2025-01-12" data-link="post3.html"></div>
+  </div>
+
+  <!-- Dynamic post container -->
+  <div id="posts-list">
+    <!-- Dynamic posts will be displayed here -->
+  </div>
+
+  <script>
+    // JavaScript to render posts dynamically
+    (function() {
+      const allPosts = document.querySelectorAll('#all-posts div');
+      const postsContainer = document.getElementById('posts-list');
+
+      allPosts.forEach(post => {
+        if (post.dataset.category === 'telugu-jobs') {
+          const postElement = document.createElement('div');
+          postElement.classList.add('post-item');
+          postElement.innerHTML = `
+            <h3>${post.dataset.title}</h3>
+            <p>${post.dataset.date}</p>
+            <a href="${post.dataset.link}">Read More</a>
+          `;
+          postsContainer.appendChild(postElement);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
