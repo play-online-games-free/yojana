@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telugu Jobs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #6c63ff;
+      color: white;
+      margin: 0;
+    }
+
+    #posts-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .post-item {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .post-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-thumbnail {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post-content {
+      padding: 15px;
+    }
+
+    .post-title {
+      font-size: 1.25em;
+      margin: 0 0 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .post-title:hover {
+      color: #6c63ff;
+      text-decoration: underline;
+    }
+
+    .post-date {
+      font-size: 0.9em;
+      color: #777;
+      margin: 5px 0;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+
+    .read-more:hover {
+      background-color: #574fe3;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .post-thumbnail {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .read-more {
+        font-size: 0.8em;
+      }
+
+      .post-thumbnail {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Telugu Jobs</h1>
+
+  <!-- Dynamic post container -->
+  <div id="posts-list"></div>
+
+  <!-- Hidden data -->
+  <div id="all-posts" class="hidden" style="display: none;">
+    <div data-category="telugu-jobs" data-title="CSIR NEIST జూనియర్ అసిస్టెంట్ రిక్రూట్మెంట్ 2025
+" data-date="2025-01-17" data-link="https://mahalaxmischeme.com/telugu-jobs/junior-assistant-recruitment-2025.html" data-thumbnail="https://via.placeholder.com/300x180"></div>
+    <div data-category="telugu-jobs" data-title="DGAFMS Group C Recruitment 2025
+" data-date="2025-01-15" data-link="https://mahalaxmischeme.com/telugu-jobs/dgafms-group-c-recruitment-2025.html" data-thumbnail="https://via.placeholder.com/300x180"></div>
+    <div data-category="other-category" data-title="Other Job" data-date="2025-01-12" data-link="post3.html" data-thumbnail="https://via.placeholder.com/300x180"></div>
+  </div>
+
+  <script>
+    (function () {
+      const allPosts = document.querySelectorAll('#all-posts div');
+      const postsContainer = document.getElementById('posts-list');
+
+      allPosts.forEach(post => {
+        if (post.dataset.category === 'telugu-jobs') {
+          const postElement = document.createElement('div');
+          postElement.classList.add('post-item');
+          postElement.innerHTML = `
+            <img class="post-thumbnail" src="${post.dataset.thumbnail}" alt="${post.dataset.title}">
+            <div class="post-content">
+              <a href="${post.dataset.link}" class="post-title">${post.dataset.title}</a>
+              <p class="post-date">${post.dataset.date}</p>
+              <a href="${post.dataset.link}" class="read-more">Read More</a>
+            </div>
+          `;
+          postsContainer.appendChild(postElement);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
