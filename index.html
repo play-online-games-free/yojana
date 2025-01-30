@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mahalaxmi Scheme: Get detailed information about benefits, eligibility, application process, and how to apply for the Mahalaxmi Scheme in 2025.">
 <meta name="keywords" content="Mahalaxmi Scheme, Government Schemes 2025, Mahalaxmi Scheme Benefits, Mahalaxmi Yojana Application, Financial Assistance Scheme">
@@ -12,293 +12,262 @@
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mahalaxmischeme.com">
+  <title>Mahalaxmi Scheme</title>
 
-    <title>Mahalaxmi Scheme </title>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <style>
-        :root {
-            --primary-color: #f0f4f8;
-            --secondary-color: #d0e8f2;
-            --text-color: #333;
-            --accent-color: #4a90e2;
-        }
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        body {
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--primary-color);
         }
 
+        /* Header Styles */
         header {
-            background-color: var(--secondary-color);
-            padding: 1rem;
+            background: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #1a237e;
+            font-weight: bold;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        nav ul {
+        .nav-links {
             display: flex;
-            list-style: none;
+            gap: 20px;
         }
 
-        nav ul li {
-            margin-left: 1rem;
-        }
-
-        nav ul li a {
+        .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
+            color: #333;
+            font-weight: 500;
         }
 
-        #menu-toggle {
-            display: none;
-            background: none;
+        /* Hero Section */
+        .hero {
+            background: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .search-btn {
+            background: #1a237e;
+            color: white;
             border: none;
+            padding: 10px 30px;
+            border-radius: 4px;
             cursor: pointer;
         }
 
-        #menu-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-color);
-            margin: 5px 0;
+        /* Job Categories */
+        .categories {
+            padding: 40px 20px;
         }
 
-        main {
-            display: flex;
-            padding: 2rem;
-            gap: 2rem;
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a237e;
         }
 
-        .content {
-            flex: 3;
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .posts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .post {
-            flex: 0 1 calc(50% - 1rem);
-            background-color: #fff;
+        .category-card {
+            background: #fff;
+            padding: 20px;
             border-radius: 5px;
-            overflow: hidden;
+            text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
         }
 
-        .post:hover {
-            transform: translateY(-5px);
+        /* Latest Jobs */
+        .latest-jobs {
+            padding: 40px 20px;
+            background: #f5f5f5;
         }
 
-        .post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .job-list {
+            display: grid;
+            gap: 15px;
         }
 
-        .post h2 {
-            padding: 1rem;
-            font-size: 1.2rem;
-        }
-
-        aside {
-            flex: 1;
-            background-color: var(--secondary-color);
-            padding: 1rem;
+        .job-card {
+            background: #fff;
+            padding: 15px;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        aside ul {
-            list-style: none;
-        }
-
-        aside ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        aside ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-        }
-
+        /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            background: #1a237e;
+            color: white;
+            padding: 40px 20px;
         }
 
-        .footer-logo img {
-            max-width: 80px;
-            height: auto;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
         }
 
-        .footer-links ul {
+        .footer-section h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
             list-style: none;
         }
 
-        .footer-links ul li {
-            margin-bottom: 0.5rem;
+        .footer-section ul li {
+            margin-bottom: 8px;
         }
 
-        .footer-links ul li a {
+        .footer-section a {
+            color: white;
             text-decoration: none;
-            color: var(--text-color);
-        }
-
-        .social-icons a {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin-left: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            header nav {
-                display: none;
-            }
-
-            #menu-toggle {
-                display: block;
-            }
-
-            main {
-                flex-direction: column;
-            }
-
-            .posts {
-                flex-direction: column;
-            }
-
-            .post {
-                flex: 1 1 100%;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .footer-logo, .footer-links, .social-icons {
-                margin-bottom: 1rem;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://via.placeholder.com/100x50.png?text=Blog+Logo" alt="Blog Logo" width="100" height="50">
-        </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="logo">SarkariNaukri</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#jobs">Latest Jobs</a>
+                <a href="#admit-card">Admit Card</a>
+                <a href="#results">Results</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
-        <button id="menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
 
-    <main>
-        <div class="content">
-            <div class="posts">
-                <article class="post">
-                    <img src="https://source.unsplash.com/random/300x200?nature" alt="Nature" width="300" height="200">
-                    <h2>Exploring Nature's Beauty</h2>
-                </article>
-                <article class="post">
-                    <img src="https://source.unsplash.com/random/300x200?technology" alt="Technology" width="300" height="200">
-                    <h2>The Future of Technology</h2>
-                </article>
-                <article class="post">
-                    <img src="https://source.unsplash.com/random/300x200?food" alt="Food" width="300" height="200">
-                    <h2>Culinary Adventures</h2>
-                </article>
-                <article class="post">
-                    <img src="https://source.unsplash.com/random/300x200?travel" alt="Travel" width="300" height="200">
-                    <h2>Wanderlust: Travel Tales</h2>
-                </article>
+    <section class="hero">
+        <h1>Find Your Government Job</h1>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Search jobs...">
+                <select>
+                    <option>All Categories</option>
+                    <option>Bank Jobs</option>
+                    <option>Railway Jobs</option>
+                    <option>SSC Jobs</option>
+                </select>
+                <select>
+                    <option>All Locations</option>
+                    <option>Delhi</option>
+                    <option>Mumbai</option>
+                    <option>Kolkata</option>
+                </select>
+                <button class="search-btn">Search</button>
             </div>
         </div>
-        <aside>
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#travel">Travel</a></li>
-                <li><a href="#food">Food</a></li>
-                <li><a href="#lifestyle">Lifestyle</a></li>
-            </ul>
-        </aside>
-    </main>
+    </section>
+
+    <section class="categories">
+        <h2 class="section-title">Popular Job Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Banking Jobs</h3>
+                <p>1000+ Openings</p>
+            </div>
+            <div class="category-card">
+                <h3>Railway Jobs</h3>
+                <p>500+ Openings</p>
+            </div>
+            <div class="category-card">
+                <h3>SSC Jobs</h3>
+                <p>800+ Openings</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-jobs">
+        <h2 class="section-title">Latest Job Notifications</h2>
+        <div class="job-list">
+            <div class="job-card">
+                <h3>IBPS Clerk Recruitment 2023</h3>
+                <p>Last Date: 30 October 2023</p>
+                <button>Apply Now</button>
+            </div>
+            <!-- Add more job cards -->
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-logo">
-            <img src="https://via.placeholder.com/80x40.png?text=Blog+Logo" alt="Blog Logo" width="80" height="40">
-        </div>
-        <div class="footer-links">
-            <h3>Important Pages</h3>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@sarkarinaukri.com</p>
+                <p>Phone: +91 1234567890</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.getElementById('menu-toggle');
-            const nav = document.querySelector('nav');
-
-            // Toggle menu on mobile
-            menuToggle.addEventListener('click', () => {
-                nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        // Add interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search functionality
+            document.querySelector('.search-btn').addEventListener('click', function() {
+                const searchText = document.querySelector('input[type="text"]').value;
+                // Add search logic here
+                alert('Searching for: ' + searchText);
             });
 
-            // Lazy load images
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const image = entry.target;
-                            image.src = image.dataset.src;
-                            observer.unobserve(image);
-                        }
-                    });
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if(menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
                 });
-
-                document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
             }
         });
     </script>
 </body>
 </html>
-
