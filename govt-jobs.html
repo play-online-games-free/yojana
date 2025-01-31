@@ -4,175 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Jobs Portal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f2f5;
-        }
+   <body>
+       <div id="article-list"></div>
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .job-form {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .jobs-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .job-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .job-category {
-            color: #007bff;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .job-title {
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-
-        .job-department {
-            color: #666;
-            margin-bottom: 8px;
-        }
-
-        .job-date {
-            color: #888;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Government Jobs Portal</h1>
-        
-        <div class="job-form">
-            <h2>Post New Job</h2>
-            <form id="jobForm">
-                <div class="form-group">
-                    <label for="title">Job Title</label>
-                    <input type="text" id="title" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <select id="category" required>
-                        <option value="">Select Category</option>
-                        <option value="Engineering">Engineering</option>
-                        <option value="Medical">Medical</option>
-                        <option value="Administration">Administration</option>
-                        <option value="Education">Education</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="department">Department</label>
-                    <input type="text" id="department" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastDate">Last Date to Apply</label>
-                    <input type="date" id="lastDate" required>
-                </div>
-
-                <button type="submit">Post Job</button>
-            </form>
-        </div>
-
-        <h2>Available Jobs</h2>
-        <div class="jobs-container" id="jobsContainer"></div>
-    </div>
-
-    <script>
-        // Load jobs when page loads
-        document.addEventListener('DOMContentLoaded', loadJobs);
-
-        // Handle form submission
-        document.getElementById('jobForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const job = {
-                title: document.getElementById('title').value,
-                category: document.getElementById('category').value,
-                department: document.getElementById('department').value,
-                lastDate: document.getElementById('lastDate').value,
-                postedDate: new Date().toLocaleDateString()
-            };
-
-            saveJob(job);
-            this.reset();
-            loadJobs();
-        });
-
-        function saveJob(job) {
-            let jobs = JSON.parse(localStorage.getItem('govtJobs') || '[]');
-            jobs.push(job);
-            localStorage.setItem('govtJobs', JSON.stringify(jobs));
-        }
-
-        function loadJobs() {
-            const jobsContainer = document.getElementById('jobsContainer');
-            jobsContainer.innerHTML = '';
-            
-            const jobs = JSON.parse(localStorage.getItem('govtJobs') || '[]');
-            
-            jobs.forEach(job => {
-                const jobCard = document.createElement('div');
-                jobCard.className = 'job-card';
-                jobCard.innerHTML = `
-                    <div class="job-category">${job.category}</div>
-                    <div class="job-title">${job.title}</div>
-                    <div class="job-department">${job.department}</div>
-                    <div class="job-date">Posted: ${job.postedDate}</div>
-                    <div class="job-date">Last Date: ${job.lastDate}</div>
-                `;
-                jobsContainer.appendChild(jobCard);
-            });
-        }
-    </script>
+<script>
+  // Fetch the JSON file for the current category
+  fetch('/data/govt-jobs.json')
+    .then(response => response.json())
+    .then(articles => {
+      const container = document.getElementById('article-list');
+      
+      articles.forEach(article => {
+        const articleHTML = `
+          <div class="article-item">
+            <h3><a href="${article.url}">${article.title}</a></h3>
+            <p>${article.description}</p>
+          </div>
+        `;
+        container.innerHTML += articleHTML;
+      });
+    });
+</script>
 </body>
 </html>
