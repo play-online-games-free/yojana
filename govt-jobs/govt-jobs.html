@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Jobs Portal</title>
+   <body>
+       <div id="article-list"></div>
+
+<script>
+  // Fetch the JSON file for the current category
+  fetch('/data/govt-jobs.json')
+    .then(response => response.json())
+    .then(articles => {
+      const container = document.getElementById('article-list');
+      
+      articles.forEach(article => {
+        const articleHTML = `
+          <div class="article-item">
+            <h3><a href="${article.url}">${article.title}</a></h3>
+            <p>${article.description}</p>
+          </div>
+        `;
+        container.innerHTML += articleHTML;
+      });
+    });
+</script>
+</body>
+</html>
