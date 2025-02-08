@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Jobs Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .job-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .job-title {
+            color: #1a237e;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-department {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-details {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .apply-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .footer {
+            background-color: #1a237e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .job-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Government Jobs Portal</h1>
+    </header>
+
+    <div class="container">
+        <div class="job-grid" id="jobContainer">
+            <!-- Job cards will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 MahalaxmiScheme.com. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample job data with unique application links
+        const jobs = [
+           {
+                 title: "DGAFMS Group C Recruitment 2025",
+                department: "Govt",
+                location: "Telangana, AP",
+                experience: "Freshers Eligible",
+                link: "https://mahalaxmischeme.com/telugu-jobs/dgafms-group-c-recruitment-2025.html"
+            },
+            {
+                 title: "JEE Mains 2025 అడ్మిట్ కార్డ్ వివరాలు",
+                department: "Govt",
+                location: "All India",
+              
+                link: "https://mahalaxmischeme.com/telugu-jobs/jee-mains-2025-admit-card-details-in-telugu.html"
+            },
+            {
+                 title: "CSIR NEIST జూనియర్ అసిస్టెంట్ రిక్రూట్మెంట్ 2025",
+                department: "Govt",
+                location: "Telangana",
+                
+                link: "https://mahalaxmischeme.com/telugu-jobs/junior-assistant-recruitment-2025.html"
+            },
+            {
+                 title: "NIAB Field Assistant Recruitment 2025",
+                department: "Govt",
+                location: "India",
+                experience: "Freshers Eligible",
+                link: "https://mahalaxmischeme.com/telugu-jobs/niab-field-assistant-recruitment-2025.html"
+            },
+            {
+                title: "RRB RPF Constable Jobs 2025",
+                location: "India",
+                experience: "Freshers Eligible",
+                link: "https://mahalaxmischeme.com/telugu-jobs/rrb-rpf-constable-jobs-2025.html"
+            },
+            {
+                title: "ఆంధ్రప్రదేశ్ Warden/Attendant రిక్రూట్మెంట్ 2025",
+                location: "India",
+                experience: "Freshers Eligible",
+                link: "https://mahalaxmischeme.com/telugu-jobs/warden-attendant-recruitment-2025.html"
+            },
+            
+            // Add more job objects with respective links as needed
+        ];
+
+        // Function to create job cards
+        function createJobCards() {
+            const container = document.getElementById('jobContainer');
+            
+            jobs.forEach(job => {
+                const jobCard = document.createElement('div');
+                jobCard.className = 'job-card';
+                jobCard.innerHTML = `
+                    <h3 class="job-title">${job.title}</h3>
+                    <p class="job-department">${job.department}</p>
+                    <div class="job-details">
+                        <p><strong>Location:</strong> ${job.location}</p>
+                        <p><strong>Last Date:</strong> ${job.lastDate}</p>
+                        <p><strong>Experience:</strong> ${job.experience}</p>
+                    </div>
+                    <a href="${job.link}" class="apply-button" target="_blank">Apply Now</a>
+                `;
+                container.appendChild(jobCard);
+            });
+        }
+
+        // Initialize job cards when page loads
+        window.onload = createJobCards;
+    </script>
+</body>
+</html>
